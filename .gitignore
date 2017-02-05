@@ -1,0 +1,9 @@
+# Created by .gitignore support plugin (hsz.mobi)
+.idea/
+*.iml
+
+target/
+dependency-reduced-pom.xml
+.DS_Store
+scheduler-server/src/it/resources/logback.xml
+*/**/scalastyle-output.xml
