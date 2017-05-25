@@ -5,22 +5,17 @@ import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.JButton;
-import javax.swing.JComboBox;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JTextField;
+import javax.swing.*;
 
-public class Login {
-	public JFrame framemain = new JFrame("gezer bot");
+class Login {
+	JFrame framemain = new JFrame("gezer bot");
 
-	public Login() {
+	Login() {
 
-		framemain.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		framemain.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		framemain.setResizable(false);
 		framemain.setLayout(null);
-		framemain.setPreferredSize(new Dimension(200, 300));
+		framemain.setPreferredSize(new Dimension(500, 500));
 		framemain.setLocation(400, 200);
 
 		// Heading: LOGIN
@@ -78,7 +73,7 @@ public class Login {
 		framemain.add(loginBtn);
 
 		JLabel info = new JLabel("<html>keep minimize upon connection <br/>&#160 &#160 &#160 i will triger alert for you <br/> when new exam scan uploaded<html>");
-		info.setBounds(9, 210, 200, 50);
+		info.setBounds(9, 210, 200, 200);
 		framemain.add(info);
 		framemain.pack();
 		framemain.setVisible(true);
@@ -92,7 +87,7 @@ public class Login {
 				framemain.getContentPane().removeAll();
 				framemain.setPreferredSize(null);
 				framemain.setLayout(new BorderLayout());
-				JLabel con = new JLabel("conecting...");
+				JLabel con = new JLabel("connecting...");
 				framemain.add(con);
 				framemain.repaint();
 				framemain.pack();

@@ -38,12 +38,12 @@ public class Main {
 	private static int lastConnectNumberOfExams = 0;
 	private static int lastConnectNumberOfFileScores = 0;
 
-	public static  String userName = "XXXXXXX";
-	public static  String pass = "XXXXXXX";
-	public static  String userId = "XXXXXXX";
-	public static Login me;
+	static  String userName = "XXXXXXX";
+	static  String pass = "XXXXXXX";
+	static  String userId = "XXXXXXX";
+	private static Login me;
 
-	static int counter = 0;  // refresh counter
+	private static int counter = 0;  // refresh counter
 	static int sleep_time =1;
 
 	public static void main(String[] args) {
@@ -52,7 +52,7 @@ public class Main {
 
 	}
 	
-	public static void loop() throws Exception{   //main loop , calls from login event
+	static void loop() throws Exception{   //main loop , calls from login event
 		while (true) {
 			connectToGezerAndPrint();
 			Thread.sleep(sleep_time*60000);  //60000 = one minute
@@ -73,9 +73,9 @@ public class Main {
 		ArrayList<String> fileScores = new ArrayList<String>();
 
 		for (String s :x) {
-			if(s.contains("input") && s.contains("чебх дозбшъ")) {
+			if(s.contains("input") && s.contains("пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ")) {
 				scanExams.add(s);
-			}else if(s.contains("input") && s.contains("чебх щамеп/цйерйн")){
+			}else if(s.contains("input") && s.contains("пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ/пїЅпїЅпїЅпїЅпїЅпїЅ")){
 				fileScores.add(s);
 			}
 		}
