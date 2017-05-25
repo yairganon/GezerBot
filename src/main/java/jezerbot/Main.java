@@ -73,9 +73,9 @@ public class Main {
 		ArrayList<String> fileScores = new ArrayList<String>();
 
 		for (String s :x) {
-			if(s.contains("input") && s.contains("���� ������")) {
+			if(s.contains("input") && s.contains("קובץ המחברת")) {
 				scanExams.add(s);
-			}else if(s.contains("input") && s.contains("���� �����/������")){
+			}else if(s.contains("input") && s.contains("קובץ שאלון/ציונים")){
 				fileScores.add(s);
 			}
 		}
